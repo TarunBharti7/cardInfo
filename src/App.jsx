@@ -1,28 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react'
-import ProductInfo from './component/ProductInfo';
-
+import React from 'react'
+import Product from './component/Product'
 
 const App = () => {
-
-
-  const url = "https://fakestoreapi.com/products/";
-
-    const [data , setData] = useState([]);
-
-    const apiCall = async () => {
-      const response = await fetch(url);
-        const data = await response.json();
-        setData(data);
-        // console.log(data);
-        // console.log(count);
-    }
-
-    useEffect(() => {
-        apiCall()
-    }, [])
   return (
     <div>
-    <ProductInfo/>
+      <Product/>
     </div>
   )
 }
